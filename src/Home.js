@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Importa useNavigate
-import ecorococo from './ecorococo.png'; // Importa tu imagen aquí
+import { useNavigate } from 'react-router-dom';
+import ecorococo from './ecorococo.png';
 import './App.css';
 
 function Home() {
@@ -15,10 +15,10 @@ function Home() {
         setIsModalOpen(false);
     };
 
-    let navigate = useNavigate(); // Crea la instancia de navigate
+    let navigate = useNavigate(); // Instancia de navigate
 
     function handleGetStartedClick() {
-      navigate('/getstart'); // Redirige a la ruta 'getstart'
+      navigate('/getstart'); // Redirigo a la ruta 'getstart'
     }
   return (
     <div className="home-container">
@@ -48,7 +48,6 @@ function Home() {
                     <p className='home-description3'>
                         <strong>¡Únete a nosotros y descubre cómo puedes ser la diferencia que el mundo necesita!</strong>
                     </p>
-                    {/* Agrega más contenido según sea necesario */}
                 </div>
                 </div>
             )}

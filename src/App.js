@@ -14,7 +14,7 @@ function LogoComponent({ onClick }) {
   return (
     <div onClick={onClick}>
       <img
-        src={logo_sf} // Reemplaza con la ruta o URL de tu logo
+        src={logo_sf}
         alt="Logo"
         className="logo"
       />
@@ -33,7 +33,7 @@ function App() {
           <NavLink to="/service" className={({ isActive }) => isActive ? "active" : ""}>Service</NavLink>
           <NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""}>Contact Us</NavLink>
         </nav>
-        {/* Tus rutas aquí */}
+        {/* Rutas */}
         <Routes>
           <Route path="/" element={<Home />} exact />
           <Route path="/about" element={<About />} />

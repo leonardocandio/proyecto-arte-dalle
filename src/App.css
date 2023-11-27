@@ -1,8 +1,6 @@
-/* Suponiendo que 'NombreDeLaFuente' es el nombre de tu fuente deseada, reemplázalo con la fuente real */
 @font-face {
   font-family: 'TAN Headline';
   src: local('TAN Headline'), url('./isle_headline/IsleHeadBo_PERSONAL.ttf');
-  /* Agrega todas las variantes de formato que tengas */
 }
 
 .App {
@@ -22,15 +20,15 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #FFFCF7; /* Color de fondo claro*/
+  background-color: #FFFCF7;
 }
 
 h3 {
-  font-family:  Geneva; /* Cambia a una fuente más moderna */
-  font-size: 38px; /* o el tamaño que prefieras */
-  font-weight: bold; /* para hacerlo más prominente */
+  font-family:  Geneva;
+  font-size: 38px;
+  font-weight: bold;
   color: #38A169;
-  margin-bottom: 18px; /* añade espacio debajo del encabezado */
+  margin-bottom: 18px;
   margin-top: 10px;
 }
 
@@ -40,11 +38,11 @@ nav {
   margin-right: 800px;
   margin-top: -20px;
   display: flex;
-  align-items: center; /* Centra el logotipo y los enlaces verticalmente */
+  align-items: center;
 }
 
 .logo {
-  height: 80px; /* o el tamaño que prefieras */
+  height: 80px;
   margin-right: 7px; /* Espacio entre el logotipo y los enlaces de navegación */
   margin-top: 10px;
 }
@@ -76,7 +74,7 @@ nav a:hover {
 }
 
 h1 {
-  color: #2f855a; /* Verde oscuro para títulos */
+  color: #2f855a;
   text-align: center;
 }
 
@@ -84,25 +82,24 @@ h1 {
   font-family: 'TAN Headline', sans-serif;
   font-size: 100px;
   text-align: center;
-  margin: 0; /* Esto elimina el margen predeterminado de los títulos */
-  padding: 0; /* Esto elimina cualquier padding predeterminado */
+  margin: 0;
+  padding: 0;
 }
 
-/* Si necesitas un ajuste fino del espacio, puedes usar margen negativo o ajustar el valor de la propiedad line-height */
 .home-title {
   color: #1D2C34;
-  margin-bottom: 2px; /* Esto acerca el siguiente título, ajusta este valor como sea necesario */
+  margin-bottom: 2px;
 }
 
 .home-title2 {
   color: #06624C;
-  line-height: 0.8; /* Esto reduce el espacio entre líneas de texto, ajusta este valor como sea necesario */
+  line-height: 0.8;
 }
 
 .home-container {
-  display: flex; /* Esto alinea los hijos de home-container uno al lado del otro */
-  align-items: center; /* Esto centra los hijos verticalmente */
-  justify-content: center; /* Esto centra los hijos horizontalmente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 58px;
   padding: 20px;
 
@@ -110,9 +107,9 @@ h1 {
 }
 
 .text-container {
-  display: flex; /* Nuevo: Organiza los hijos de text-container en columna */
-  flex-direction: column; /* Nuevo: Los hijos se apilan verticalmente */
-  align-items: center; /* Nuevo: Alinea los hijos en el centro horizontalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 120px;
   padding-right: 150px;
 }
@@ -124,107 +121,104 @@ html {
 
 .home-title-container {
   margin-top: -30px;
-  text-align: center; /* Asegúrate de que el texto dentro del contenedor esté centrado */
+  text-align: center;
 }
 
 
 .home-image img {
-  width: 100%; /* Esto hará que la imagen sea tan ancha como su contenedor */
-  height: 708px; /* Esto mantiene la proporción de aspecto de la imagen */
+  width: 100%;
+  height: 708px;
 }
 
-/* Estilo para la imagen, ajusta según sea necesario */
 .home-image {
-  width: 52%; /* o tu valor preferido */
-  height: 708x; /* mantiene la proporción de la imagen */
+  width: 52%;
+  height: 708x;
   margin-top: -158px;
   margin-right: -100px;
 }
 .home-image {
-  position: relative; /* Establece una posición relativa para que puedas mover la imagen con respecto a su posición original */
-  left: -25px; /* Empuja la imagen hacia la derecha. Ajusta el valor según sea necesario */
-  transition: left 0.5s; /* Opcional: añade una transición suave para los cambios de posición */
+  position: relative;
+  left: -25px;
+  transition: left 0.5s;
 }
 
 
 .home-description-container {
   background-color: #FFE282;
-  border-radius: 20px; /* Ajusta para bordes menos redondeados */
-  padding: 20px; /* Añade un poco de espacio interior */
-  margin-top: 40px; /* Añade espacio arriba para separar del título */
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 40px;
   width: 500px;
   align-items: 'center';
   text-align: center;
-  
-  /* Mantén el resto de tu CSS para home-description-container aquí */
 }
 
 .home-description {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Cambia a una fuente más moderna */
-  color: #333; /* Un color oscuro para mejor contraste */
-  font-size: 19px; /* Un tamaño de fuente legible */
-  line-height: 1.6; /* Espacio entre líneas para facilitar la lectura */
-  text-align: center; /* Centrar el texto dentro del contenedor */
-  margin: 0 auto; /* Alinea el texto de manera horizontal y vertical */
-  max-width: 600px; /* Un ancho máximo para controlar la longitud de la línea */
-  padding: 20px; /* Espacio alrededor del texto */
-  background-color: transparent; /* Fondo transparente para no distraer */
-  letter-spacing: 0.5px; /* Espaciado entre letras para una mejor claridad */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  font-size: 19px;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
+  background-color: transparent;
+  letter-spacing: 0.5px; /* Espaciado entre letras*/
   margin-top: -13px;
-  font-weight: 400; /* Un peso de fuente normal para evitar la sobrecarga visual */
+  font-weight: 400;
 }
 
 
 .home-description2 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Cambia a una fuente más moderna */
-  color: #333; /* Un color oscuro para mejor contraste */
-  font-size: 18px; /* Un tamaño de fuente legible */
-  line-height: 1.3; /* Espacio entre líneas para facilitar la lectura */
-  margin: 0 auto; /* Alinea el texto de manera horizontal y vertical */
-  max-width: 600px; /* Un ancho máximo para controlar la longitud de la línea */
-  padding: 10px; /* Espacio alrededor del texto */
-  background-color: transparent; /* Fondo transparente para no distraer */
-  letter-spacing: 0.5px; /* Espaciado entre letras para una mejor claridad */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 10px;
+  background-color: transparent;
+  letter-spacing: 0.5px;
   margin-top: -12px;
-  font-weight: 600; /* Un peso de fuente normal para evitar la sobrecarga visual */
+  font-weight: 600;
   text-align: justify;
   text-justify: inter-word;
   margin-top: -20px;
 }
 
 .home-description3 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Cambia a una fuente más moderna */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #359364;
-  font-size: 23px; /* Un tamaño de fuente legible */
-  line-height: 1.3; /* Espacio entre líneas para facilitar la lectura */
-  margin: 0 auto; /* Alinea el texto de manera horizontal y vertical */
-  max-width: 600px; /* Un ancho máximo para controlar la longitud de la línea */
-  padding: 10px; /* Espacio alrededor del texto */
-  background-color: transparent; /* Fondo transparente para no distraer */
-  letter-spacing: 0.5px; /* Espaciado entre letras para una mejor claridad */
+  font-size: 23px;
+  line-height: 1.3;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 10px;
+  background-color: transparent;
+  letter-spacing: 0.5px;
   margin-top: -10px;
-  font-weight: 600; /* Un peso de fuente normal para evitar la sobrecarga visual */
+  font-weight: 600;
   text-align: center;
 }
 
 .home-description4 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Cambia a una fuente más moderna */
-  color: #333; /* Un color oscuro para mejor contraste */
-  font-size: 18px; /* Un tamaño de fuente legible */
-  line-height: 1.3; /* Espacio entre líneas para facilitar la lectura */
-  margin: 0 auto; /* Alinea el texto de manera horizontal y vertical */
-  max-width: 600px; /* Un ancho máximo para controlar la longitud de la línea */
-  padding: 10px; /* Espacio alrededor del texto */
-  background-color: transparent; /* Fondo transparente para no distraer */
-  letter-spacing: 0.5px; /* Espaciado entre letras para una mejor claridad */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 10px;
+  background-color: transparent;
+  letter-spacing: 0.5px;
   margin-top: -20px;
-  font-weight: 600; /* Un peso de fuente normal para evitar la sobrecarga visual */
+  font-weight: 600;
   text-align: center;
 }
 
 
 .home-button {
-  background-color: #4CAF50; /* Un verde para el botón, cambia según tu diseño */
+  background-color: #4CAF50;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -234,7 +228,7 @@ html {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 20px; /* Botones con bordes redondeados */
+  border-radius: 20px;
 }
 
 .buton-container{
@@ -247,9 +241,9 @@ html {
 .upload-section {
   padding: 20px;
   margin: 20px auto;
-  width: 80%; /* Adjust the width as needed */
-  display: flex; /* Use flexbox to lay out children side by side */
-  justify-content: space-between; /* This will put space between your two sections */
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .inputImage{
@@ -257,8 +251,6 @@ html {
   justify-content: center;
   text-align: center;
 }
-
-/*ESTE ESSS*/
 
 .upload-box svg{
  margin-top: 30px;
@@ -282,26 +274,24 @@ html {
   display: block;
   color: #333;
   padding: 10px;
-  border: 5px dashed #aaa; /* Or any style you prefer */
+  border: 5px dashed #aaa;
   cursor: pointer;
-  width: 60%; /* Adjust the width of labels to take up less than half the container width */
+  width: 60%;
   height: 250px;
   border-radius: 40px;
 }
 
 .upload-section input {
   
-  display: none; /* Hide the actual input field */
+  display: none;
 }
 
-/* Add styles for a pseudo element to show the 'Select file' text */
 .upload-section label::after, .upload-section span::after {
   display: block;
   margin-top: 5px;
   text-align: center;
 }
 
-/* Style for the container of each upload section */
 .upload-item {
   display: flex;
   flex-direction: column;
@@ -310,29 +300,29 @@ html {
 }
 
 .upload-label {
-  margin-bottom: 16px; /* Spacing between label and box */
+  margin-bottom: 16px;
   text-align: center;
-  font-size: 1.25rem; /* Adjust the font size as needed */
+  font-size: 1.25rem;
 }
 
 
 .upload-section input {
-  display: none; /* Hide the actual input field */
+  display: none;
 }
 
-/*AQUI ES LO DE LA BARRA*/
+/*Estilos para la Barra de Carga: */
 .uploading-info {
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 19px;
   font-weight: 600;
   position: absolute;
-  bottom:135px; /* Ajusta esto para que la barra aparezca debajo del upload box */
+  bottom:135px;
   left: 0;
   color:#222;
   margin-left: -300px;
-  width: 100%; /* La barra de carga ahora se ajustará al contenedor de upload */
-  padding: 0 550px; /* Añadido para alinear con el padding del upload box */
-  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+  width: 100%;
+  padding: 0 550px;
+  box-sizing: border-box;
 }
 
 .uploading-info2 {
@@ -340,36 +330,34 @@ html {
   font-size: 19px;
   font-weight: 600;
   position: absolute;
-  bottom:135px; /* Ajusta esto para que la barra aparezca debajo del upload box */
+  bottom:135px;
   left: 0;
   color:#222;
   margin-left: 330px;
-  width: 100%; /* La barra de carga ahora se ajustará al contenedor de upload */
-  padding: 0 550px; /* Añadido para alinear con el padding del upload box */
-  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+  width: 100%;
+  padding: 0 550px;
+  box-sizing: border-box;
 }
 
 .uploading-info p, .uploading-info2 p{
   margin-right: 18px;
   text-align: center;
   justify-content: center;
-  align-items: center; /* Alinea el ícono y el texto verticalmente */
+  align-items: center;
   
 }
-
 
 .uploading-info svg, .uploading-info2 svg{
   margin-bottom: -4px;
   padding-right: 5px;
 }
 
-
 .progress-bar {
-  width: calc(100% - 20px); /* Ajusta esto según el padding del upload box */
+  width: calc(100% - 20px);
   background-color: #e0e0e0;
   border-radius: 5px;
   overflow: hidden;
-  height: 10px; /* Ajusta la altura de la barra de progreso si es necesario */
+  height: 10px;
 }
 
 .progress {
@@ -377,10 +365,7 @@ html {
   background-color: #4056F4;
   width: 0; /* Inicialmente no mostrar progreso */
   border-radius: 5px;
-  /* Elimina la línea de la transición */
 }
-
-/*AQUI TERMINA LO DE LA BARRA*/
 
 /* Botón para editar imagen */
 button {
@@ -394,7 +379,7 @@ button {
 }
 
 button:hover {
-  background-color: #38a169; /* Un verde ligeramente más oscuro al pasar el ratón */
+  background-color: #38a169; /* Un verde ligeramente más oscuro al pasar el mouse */
 }
 
 .modal-background {
@@ -404,7 +389,7 @@ button:hover {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1000; /* Un valor alto para asegurarse de que se superponga sobre otros elementos */
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -417,13 +402,13 @@ button:hover {
   width: 50%;
   height: 600px;
   max-width: 700px;
-  z-index: 1001; /* Asegúrate de que el contenido del modal también tenga un z-index alto */
+  z-index: 1001;
   text-align: center;
-  position: relative; /* Posicionamiento relativo para elementos internos si es necesario */
+  position: relative;
 }
 
 .modal-content p {
-  letter-spacing: -0.4px; /* Puede ser 'normal', un valor negativo para acercar las letras, o positivo para separarlas */
+  letter-spacing: -0.4px;
 }
 
 .close-modal {
@@ -433,18 +418,17 @@ button:hover {
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
-  z-index: 1002; /* Asegúrate de que esté por encima de otros elementos */
-  color: #566; /* Un color neutro */
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Sombra de texto sutil */
-  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out; /* Transiciones suaves para hover */
+  z-index: 1002;
+  color: #566;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
   transform: scale(1.2);
 }
 
 .close-modal:hover {
-  color: #666; /* Cambia a un color más oscuro para el hover */
-  transform: scale(1.3); /* Aumenta ligeramente el tamaño para indicar interactividad */
+  color: #666;
+  transform: scale(1.3);
 }
-
 
 /* Estilos para la imagen editada */
 .edited-image-section {

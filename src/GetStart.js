@@ -8,7 +8,8 @@ function GetStart() {
   const [inputImage, setInputImage] = useState(null);
   const [outputImage, setOutputImage] = useState('');
   const [maskImage, setMaskImage] = useState(null);
-  // Agregar nuevos estados para el nombre del archivo y el progreso de carga
+
+  // Estados para el nombre del archivo y el progreso de carga:
   const [uploading, setUploading] = useState(false);
   const [inputImageName, setInputImageName] = useState('');
   const [maskImageName, setMaskImageName] = useState('');
@@ -17,7 +18,7 @@ function GetStart() {
   const [inputImageLoaded, setInputImageLoaded] = useState(false);
   const [maskImageLoaded, setMaskImageLoaded] = useState(false);
 
-  // Estado para manejar el progreso de la carga
+  // Estado para manejar el progreso de la carga:
   const [progress, setProgress] = useState(0);
   const [progress2, setProgress2] = useState(0);
   
@@ -44,7 +45,7 @@ function GetStart() {
     setProgress(0);
     setUploading(true); // Iniciar la simulación de carga
 
-      // Cancela cualquier proceso de carga anterior si aún está activo
+    // Cancela cualquier proceso de carga anterior si aún está activo
     clearInterval(window.inputUploadInterval);
     
     // Simular el proceso de carga
@@ -61,7 +62,6 @@ function GetStart() {
     }, 70); // Actualiza el progreso cada 70ms
   };
 
-  // Similar para la máscara
   const handleMaskUpload = (e) => {
     const file = e.target.files[0];
     setMaskImage(file);
@@ -96,7 +96,6 @@ function GetStart() {
         image: inputImage,
         mask: maskImage
       });
-      // Assuming the OpenAI response contains the edited image URL
       setOutputImage(response.data[0].url);
     } catch (error) {
       console.error('Error editing image:', error);
