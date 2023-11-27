@@ -1,68 +1,48 @@
-import React, { useState } from 'react';
-import {OpenAI} from 'openai';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link, NavLink} from 'react-router-dom';
+import logo_sf from '../src/logo_sf.png';
+import Home from './Home';
+import About from './About';
+import Service from './Service';
+import Contact from './Contact';
+import GetStart from './GetStart';
+import useSound from 'use-sound';
+import musica from './musica_fondo.m4a';
+import './App.css';
 
-
-function App() {
-  const [inputImage, setInputImage] = useState(null);
-  const [outputImage, setOutputImage] = useState('');
-  const [maskImage, setMaskImage] = useState(null);
-  const openai = new OpenAI({apiKey: "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", dangerouslyAllowBrowser: true});
-
-
-
-
-  const handleInputUpload = (e) => {
-    const file = e.target.files[0];
-    setInputImage(file);
-  };
-
-  const handleMaskUpload = (e) => {
-    const file = e.target.files[0];
-    setMaskImage(file)
-  }
-
-  const handleEditImage = async () => {
-    try {
-
-      const response = await openai.images.edit({
-        prompt: 'Make this city look like humans have abandoned it and nature has grown everywhere',
-        image: inputImage,
-        mask: maskImage
-      });
-      // Assuming the OpenAI response contains the edited image URL
-      setOutputImage(response.data[0].url);
-    } catch (error) {
-      console.error('Error editing image:', error);
-    }
-  };
-
+function LogoComponent({ onClick }) {
   return (
+    <div onClick={onClick}>
+      <img
+        src={logo_sf} // Reemplaza con la ruta o URL de tu logo
+        alt="Logo"
+        className="logo"
+      />
+    </div>
+  );
+}
+function App() {
+  const [playSound] = useSound(musica);
+  return (
+    <Router>
       <div className="App">
-        <h1>Huellas Humanas</h1>
-        <div>
-          <label htmlFor="inputImage">Upload Image:</label>
-          <input
-              type="file"
-              accept=".png"
-              id="inputImage"
-              onChange={handleInputUpload}
-          />
-          <span>Mask</span>
-          <input
-            type="file"
-            accept=".png"
-            id="maskImage"
-            onChange={handleMaskUpload}
-          />
-        </div>
-        <button onClick={handleEditImage}>Edit Image</button>
-        {outputImage && (
-            <div>
-              <h2>Edited Image:</h2>
-              <img src={outputImage} alt="Edited" />
-            </div>
-        )}
+        <nav>
+          <LogoComponent onClick={playSound} />
+          <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
+          <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>About Us</NavLink>
+          <NavLink to="/service" className={({ isActive }) => isActive ? "active" : ""}>Service</NavLink>
+          <NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""}>Contact Us</NavLink>
+        </nav>
+        {/* Tus rutas aquí */}
+        <Routes>
+          <Route path="/" element={<Home />} exact />
+          <Route path="/about" element={<About />} />
+          <Route path="/service" element={<Service />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/getstart" element={<GetStart />} />
+        </Routes>
       </div>
+    </Router>
   );
 }
 
