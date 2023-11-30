@@ -1,0 +1,9 @@
+/* Contact.css */
+.contact-container {
+  display: flex;
+  align-items: center; /* Alinear verticalmente al centro */
+}
+
+.text-container {
+  flex: 1; /* Ocupar el espacio restante disponible */
+}

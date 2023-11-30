@@ -475,3 +475,32 @@ button:hover {
     transform: rotate(360deg);
   }
 }
+
+.scroll-container {
+  max-height: calc(100vh - 100px); /* Ajusta la altura máxima restando el margen inferior */
+  overflow-y: auto;
+  margin-bottom: 100px;
+}
+
+.about-container {
+  padding: 20px;
+}
+
+.imagenes-container {
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  gap: 1px; /* Espaciado entre las imágenes */
+  margin : 20px
+}
+
+.imagen-container {
+  flex: 0 0 auto; /* Permite que el contenedor se ajuste al tamaño de su contenido */
+  text-align: center;
+  margin: 0px; /* Añade márgenes alrededor del contenedor de la imagen */
+}
+
+.imagen-container img {
+  width: 580px; /* Establece el ancho máximo de la imagen */
+  height: 400px; /* Mantiene la relación de aspecto de la imagen */
+  border-radius: 10px; /* Añade bordes redondeados */
+}
