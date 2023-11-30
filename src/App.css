@@ -431,10 +431,6 @@ button {
   margin-top: 50px;
 }
 
-.input-container{
-  margin-top: 60px;
-  margin-bottom: -30px;
-}
 
 button:hover {
   background-color: #38a169; /* Un verde ligeramente más oscuro al pasar el mouse */

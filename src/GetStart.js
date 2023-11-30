@@ -9,9 +9,9 @@ import {Buffer} from "buffer";
 function GetStart() {
     const [inputImage, setInputImage] = useState(null);
     const [outputImage, setOutputImage] = useState('');
-
+    const [isUploadingOrComplete, setIsUploadingOrComplete] = useState(false);
     // Estados para el nombre del archivo y el progreso de carga:
-    const [, setUploading] = useState(false);
+    const [uploading, setUploading] = useState(false);
     const [inputImageName, setInputImageName] = useState('');
     const [inputImageTam, setInputImageTam] = useState('');
     const [inputImageLoaded, setInputImageLoaded] = useState(false);
@@ -38,6 +38,7 @@ function GetStart() {
     }
 
     const handleInputUpload = (e) => {
+        setIsUploadingOrComplete(true); 
         const file = e.target.files[0];
 
 
@@ -57,6 +58,7 @@ function GetStart() {
                     clearInterval(window.inputUploadInterval); // Termina la carga
                     setInputImageLoaded(true); // Indica que la carga está completa
                     setUploading(false);
+                    setIsUploadingOrComplete(true);
                     return 100;
                 }
                 return oldProgress + 10; // Incrementa el progreso
@@ -154,7 +156,10 @@ function GetStart() {
                 </div>)}
             </div>
         </div>
-        <div className="input-container">
+        <div className="input-container" style={{ 
+            marginTop: isUploadingOrComplete ? '60px' : '20px', 
+            marginBottom: '-30px'
+        }}>
         <input
             style={{
                 backgroundColor: '#48BB78', // a light beige background for an eco-friendly look
