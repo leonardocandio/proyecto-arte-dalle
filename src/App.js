@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, NavLink} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, NavLink} from 'react-router-dom';
 import logo_sf from '../src/logo_sf.png';
 import Home from './Home';
 import About from './About';
