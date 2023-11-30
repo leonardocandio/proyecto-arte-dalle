@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'TAN Headline';
+    src: local('TAN Headline'), url('./isle_headline/IsleHeadBo_PERSONAL.ttf');
+  }
+  
+@font-face {
+    font-family: 'Bekind';
+    src: local('Bekind'), url('./isle_headline/Bekind.ttf');
+  }
+
+
+.Service-text{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    font-size: 19px;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: transparent;
+    letter-spacing: 0.5px; /* Espaciado entre letras*/
+    margin-top: -13px;
+    font-weight: 400;
+  }
+  
+  .Service-first{
+    max-width: 900px ;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 19px;
+    text-align: justify
+  
+  
+  }
+
+
+
+  .scroll-container {
+    max-height: calc(100vh - 100px); /* Ajusta la altura máxima restando el margen inferior */
+    overflow-y: auto;
+    margin-bottom: 100px;
+  }
+  
+  .about-container {
+    padding: 20px;
+  }

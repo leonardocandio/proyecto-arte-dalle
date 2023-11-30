@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import ecorococo from './ecorococo.png';
 import './App.css';
 
+
 function Home() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 

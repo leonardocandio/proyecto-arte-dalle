@@ -5,6 +5,7 @@ import {FaRegCircleCheck} from "react-icons/fa6";
 import './App.css';
 import {Buffer} from "buffer";
 
+
 function GetStart() {
     const [inputImage, setInputImage] = useState(null);
     const [outputImage, setOutputImage] = useState('');
@@ -117,7 +118,9 @@ function GetStart() {
 
     const handleImgDescription = (e) => setImgDescription(e.target.value)
 
-    return (<div className="App2">
+    return (
+    <div className="scroll-container">
+    <div className="App2">
         <h1>Huellas Humanas</h1>
         {/* Sección para cargar imágenes */}
         <div className="upload-section">
@@ -151,18 +154,34 @@ function GetStart() {
                 </div>)}
             </div>
         </div>
+        <div className="input-container">
         <input
+            style={{
+                backgroundColor: '#48BB78', // a light beige background for an eco-friendly look
+                color: '#333', // a dark greenish-brown color for text for readability
+                fontWeight: '500',
+                border: '1px solid #8c8b74', // a complementary darker beige border
+                borderRadius: '100px', // rounded corners
+                padding: '13px', // internal padding for spaciousness
+                fontFamily: 'Roboto", sans-serif', // a clean, modern font
+                fontSize: '16px', // a readable font size
+                outline: 'none', // remove the default focus outline to customize with a more subtle effect
+            }}
             type="text"
             value={imgDescription}
             onChange={handleImgDescription}
+            placeholder="¿Que deseas editar? 😊🌎" // a placeholder to guide users
         />
+        </div>
         {inputImageLoaded && <button onClick={handleEditImage}>Edit Image</button>}
         {/* Sección para mostrar la imagen editada */}
         {outputImage && (<div className="edited-image-section">
             <h2>Edited Image:</h2>
             <img src={outputImage} alt="Edited"/>
         </div>)}
-    </div>);
+    </div>
+    </div>
+    );
 
 }
 
