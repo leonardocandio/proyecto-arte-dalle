@@ -16,6 +16,8 @@ function GetStart() {
     const [inputImageTam, setInputImageTam] = useState('');
     const [inputImageLoaded, setInputImageLoaded] = useState(false);
     const [imgDescription, setImgDescription] = useState('');
+    const [generatedLoaded, setgeneratedLoaded] = useState(false)
+    const [generatedLoading, setGeneratedLoading] =useState(false);
 
     // Estado para manejar el progreso de la carga:
     const [progress, setProgress] = useState(0);
@@ -41,6 +43,9 @@ function GetStart() {
         setIsUploadingOrComplete(true); 
         const file = e.target.files[0];
 
+        if (!file) {
+            return
+        }
 
         setInputImage(file);
         setInputImageName(file.name); // Guardar el nombre del archivo
@@ -80,6 +85,8 @@ function GetStart() {
     }
 
     const handleEditImage = async () => {
+        setGeneratedLoading(true);
+
         let description, image;
         let inputImageBase64 = await getBase64(inputImage);
         let promptText = "Without adding any other answer, generate a thorough description of the every characteristic of this image. If present, describe " +
@@ -114,13 +121,15 @@ function GetStart() {
         } catch (error) {
             console.error('Error generating image:', error);
         }
-
         setOutputImage(image.data[0].url);
+        setgeneratedLoaded(true);
+        setGeneratedLoading(false);
     };
 
     const handleImgDescription = (e) => setImgDescription(e.target.value)
 
     return (
+
     <div className="scroll-container">
     <div className="App2">
         <h1>Huellas Humanas</h1>
@@ -134,7 +143,7 @@ function GetStart() {
                     </div>
                     <div className='dragfiles2'>
                         <p>Max file size: <strong>50MB</strong></p>
-                        <p>Supported file types: <strong>JPG, PNG, SVG</strong></p>
+                        <p>Supported file types: <strong>PNG</strong></p>
                     </div>
                 </label>
                 <input
@@ -144,7 +153,7 @@ function GetStart() {
                     onChange={handleInputUpload}
                 />
                 {/* Barra de carga para inputImage */}
-                {inputImageName && (<div className="uploading-info">
+                {!generatedLoaded && inputImageName && (<div className="uploading-info">
                     <p>
                         {inputImageLoaded && <FaRegCircleCheck
                             color='#4056F4'/>} {/* Muestra el ícono si la carga está completa */}
@@ -170,7 +179,7 @@ function GetStart() {
                 padding: '13px', // internal padding for spaciousness
                 fontFamily: 'Roboto", sans-serif', // a clean, modern font
                 fontSize: '16px', // a readable font size
-                outline: 'none', // remove the default focus outline to customize with a more subtle effect
+                outline: 'none', // remove the default focus outline to customize with a more subtle effectzy
             }}
             type="text"
             value={imgDescription}
@@ -185,6 +194,7 @@ function GetStart() {
             <img src={outputImage} alt="Edited"/>
         </div>)}
     </div>
+        {generatedLoading && (<div className={"overlay"}> Cargando...  </div>)}
     </div>
     );
 
